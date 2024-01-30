@@ -1,0 +1,14 @@
+C:\vlist-server\VListProject\bin\Debug\net8.0\VListProject.exe
+C:\vlist-server\VListProject\bin\Debug\net8.0\VListProject.deps.json
+C:\vlist-server\VListProject\bin\Debug\net8.0\VListProject.runtimeconfig.json
+C:\vlist-server\VListProject\bin\Debug\net8.0\VListProject.dll
+C:\vlist-server\VListProject\bin\Debug\net8.0\VListProject.pdb
+C:\vlist-server\VListProject\obj\Debug\net8.0\VListProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\vlist-server\VListProject\obj\Debug\net8.0\VListProject.AssemblyInfoInputs.cache
+C:\vlist-server\VListProject\obj\Debug\net8.0\VListProject.AssemblyInfo.cs
+C:\vlist-server\VListProject\obj\Debug\net8.0\VListProject.csproj.CoreCompileInputs.cache
+C:\vlist-server\VListProject\obj\Debug\net8.0\VListProject.dll
+C:\vlist-server\VListProject\obj\Debug\net8.0\refint\VListProject.dll
+C:\vlist-server\VListProject\obj\Debug\net8.0\VListProject.pdb
+C:\vlist-server\VListProject\obj\Debug\net8.0\VListProject.genruntimeconfig.cache
+C:\vlist-server\VListProject\obj\Debug\net8.0\ref\VListProject.dll
