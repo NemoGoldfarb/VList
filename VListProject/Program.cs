@@ -8,7 +8,12 @@ namespace VListServer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            Data.LoadData();
+            NormalList test = (NormalList)RixitConvert.StringtoList("u00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","normal");
+            Console.WriteLine (test.Contents[0].wanted);
+            Console.WriteLine (test.Contents[1].wanted);
+            Console.WriteLine (test.Contents[2].wanted);
+            Console.WriteLine (test.Contents[3].wanted);
         }
     }
     static class Data {
@@ -37,20 +42,25 @@ namespace VListServer
             get { return lastid; }
         }
         public static void LoadData () {
+            var options = new JsonSerializerOptions
+            {
+                IncludeFields = true,
+            };
             string tmp = File.ReadAllText("normal_pokemons.json");
-            normal_list = JsonSerializer.Deserialize<Pokemon[]>(tmp);
+            normal_list = JsonSerializer.Deserialize<Pokemon[]>(tmp,options);
             tmp = File.ReadAllText("special_pokemons.json");
-            special_list = JsonSerializer.Deserialize<Pokemon[]>(tmp);
+            special_list = JsonSerializer.Deserialize<Pokemon[]>(tmp,options);
             tmp = File.ReadAllText("all_pokemons.json");
-            all_list = JsonSerializer.Deserialize<Pokemon[]>(tmp);
+            all_list = JsonSerializer.Deserialize<Pokemon[]>(tmp,options);
             lastid = all_list[all_list.Length-1].id;
         }
     }
     static class RixitConvert {
-        public static string RCtoString (IList list) {
+        public static string ListtoString (IList list) {
             string outs = "";
             string rixits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/";
-            BitArray explist = new BitArray(Data.Lastid);
+            int expsize = Data.Lastid+6-(Data.Lastid%6);
+            BitArray explist = new BitArray(expsize);
             explist.SetAll (false);
             for (int i=0; i<list.Contents.Length; i++)
             {
@@ -66,10 +76,77 @@ namespace VListServer
                 val*=2;
                 }
                 string toAdd = rixits.Substring(val, 1);
-                outs.Insert(outs.Length, toAdd);
+                outs=outs.Insert(outs.Length, toAdd);
             }
             return outs;
         }
+        public static IList StringtoList (string inputstring, string type) {
+            string rixits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/";
+            int expsize = Data.Lastid+6-(Data.Lastid%6);
+            BitArray explist = new BitArray(expsize);
+            explist.SetAll (false);
+            for (int i=0; i<inputstring.Length; i++)
+            {
+                int val = rixits.IndexOf(inputstring[i]);
+                for (int j=5; j>=0; j--)
+                {
+                    if (val%2==1) {explist[i+j]=true;}
+                    val/=2;
+                }
+            }
+            if (type=="normal")
+            {
+            NormalList outlist = new NormalList ();
+            foreach (Pokemon p in outlist.Contents) {
+                if (explist[p.id-1]) {p.flip();}
+            }
+            return outlist;
+            }
+            else if (type=="special")
+            {
+            SpecialList outlist = new SpecialList ();
+            foreach (Pokemon p in outlist.Contents) {
+                if (explist[p.id-1]) {p.flip();}
+            }
+            return outlist;
+            }
+            else
+            {
+            AllList outlist = new AllList ();
+            foreach (Pokemon p in outlist.Contents) {
+                if (explist[p.id-1]) {p.flip();}
+            }
+            return outlist;
+            }
+        }
+    }
+    class Pokemon {
+        public readonly int id;
+        public readonly string name;
+        public bool wanted;
+        public void flip ()
+        {
+            if (wanted)
+            {
+                wanted=false;
+            }
+            else
+            {
+                wanted=true;
+            }
+        }
+        public Pokemon (int ID, string NAME)
+        {
+            id=ID;
+            name=NAME;
+            wanted=false;
+        }
+      /*  public Pokemon (int tid, string tname, bool twanted)
+        {
+            id=tid;
+            name=tname;
+            wanted=twanted;
+        }*/
     }
     interface IList {
         public string Name { get; set; }
@@ -109,33 +186,6 @@ namespace VListServer
         public AllList () {
             Name = "New list!";
             Contents = Data.All_list;
-        }
-    }
-    class Pokemon {
-        public readonly int id;
-        public readonly string name;
-        public bool wanted;
-        public void flip ()
-        {
-            if (wanted)
-            {
-                wanted=false;
-            }
-            else
-            {
-                wanted=true;
-            }
-        }
-        public Pokemon (int tid, string tname)
-        {
-            id=tid;
-            name=tname;
-        }
-        public Pokemon (int tid, string tname, bool twanted)
-        {
-            id=tid;
-            name=tname;
-            wanted=twanted;
         }
     }
 }
