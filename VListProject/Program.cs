@@ -55,6 +55,10 @@ namespace VListServer
             lastid = all_list[all_list.Length-1].id;
         }
     }
+    static class Database {
+        public static List<User> loadedusers = new List<User>();
+        public static Dictionary <string,string> nametoid = new Dictionary<string, string>();
+    }
     static class RixitConvert {
         public static string ListtoString (IList list) {
             string outs = "";
@@ -186,6 +190,28 @@ namespace VListServer
         public AllList () {
             Name = "New list!";
             Contents = Data.All_list;
+        }
+    }
+    class User {
+        public IList[] lists = new IList[10];
+        public string username;
+        public string googleid;
+        public string profiledescription;
+        public Dictionary <string, string> settings = new Dictionary<string, string>();
+        public List <string> follows = new List<string> (); //!convert ids to usernames on loading user
+        public User (IList[] tlists, string tname, string tid, string tdesc, Dictionary <string, string> tsettings, List <string> tfollows) {
+            lists = tlists;
+            username = tname;
+            googleid = tid;
+            profiledescription = tdesc;
+            settings = tsettings;
+            follows = tfollows;
+        }
+        public User (string tname, string tid) {
+            username = tname;
+            googleid = tid;
+            profiledescription = "";
+            settings.Add("timestamps", "0");
         }
     }
 }
