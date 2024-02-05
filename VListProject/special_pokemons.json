@@ -1,286 +1,286 @@
 [
 {
-            "id": "144",
+            "id": 144,
             "name": "Articuno"
             } ,
 
 {
-            "id": "145",
+            "id": 145,
             "name": "Zapdos"
             } ,
 
 {
-            "id": "146",
+            "id": 146,
             "name": "Moltres"
             } ,
 
 {
-            "id": "150",
+            "id": 150,
             "name": "Mewtwo"
             } ,
 
 {
-            "id": "243",
+            "id": 243,
             "name": "Raikou"
             } ,
 
 {
-            "id": "244",
+            "id": 244,
             "name": "Entei"
             } ,
 
 {
-            "id": "245",
+            "id": 245,
             "name": "Suicune"
             } ,
 
 {
-            "id": "249",
+            "id": 249,
             "name": "Lugia"
             } ,
 
 {
-            "id": "250",
+            "id": 250,
             "name": "Ho-Oh"
             } ,
 
 {
-            "id": "377",
+            "id": 377,
             "name": "Regirock"
             } ,
 
 {
-            "id": "378",
+            "id": 378,
             "name": "Regice"
             } ,
 
 {
-            "id": "379",
+            "id": 379,
             "name": "Registeel"
             } ,
 
 {
-            "id": "380",
+            "id": 380,
             "name": "Latias"
             } ,
 
 {
-            "id": "381",
+            "id": 381,
             "name": "Latios"
             } ,
 
 {
-            "id": "381",
+            "id": 381,
             "name": "Latios"
             } ,
 
 {
-            "id": "383",
+            "id": 383,
             "name": "Groudon"
             } ,
 
 {
-            "id": "384",
+            "id": 384,
             "name": "Rayquaza"
             } ,
 
 {
-            "id": "480",
+            "id": 480,
             "name": "Uxie"
             } ,
 
 {
-            "id": "481",
+            "id": 481,
             "name": "Mesprit"
             } ,
 
 {
-            "id": "482",
+            "id": 482,
             "name": "Azelf"
             } ,
 
 {
-            "id": "483",
+            "id": 483,
             "name": "Dialga"
             } ,
 
 {
-            "id": "484",
+            "id": 484,
             "name": "Palkia"
             } ,
 
 {
-            "id": "485",
+            "id": 485,
             "name": "Heatran"
             } ,
 
 {
-            "id": "486",
+            "id": 486,
             "name": "Regigigas"
             } ,
 
 {
-            "id": "487",
+            "id": 487,
             "name": "Giratina"
             } ,
 
 {
-            "id": "488",
+            "id": 488,
             "name": "Cresselia"
             } ,
 
 {
-            "id": "638",
+            "id": 638,
             "name": "Cobalion"
             } ,
 
 {
-            "id": "639",
+            "id": 639,
             "name": "Terrakion"
             } ,
 
 {
-            "id": "640",
+            "id": 640,
             "name": "Virizion"
             } ,
 
 {
-            "id": "641",
+            "id": 641,
             "name": "Tornadus"
             } ,
 
 {
-            "id": "642",
+            "id": 642,
             "name": "Thundurus"
             } ,
 
 {
-            "id": "643",
+            "id": 643,
             "name": "Reshiram"
             } ,
 
 {
-            "id": "644",
+            "id": 644,
             "name": "Zekrom"
             } ,
 
 {
-            "id": "645",
+            "id": 645,
             "name": "Landorus"
             } ,
 
 {
-            "id": "646",
+            "id": 646,
             "name": "Kyurem"
             } ,
 
 {
-            "id": "772",
+            "id": 772,
             "name": "Type: Null"
             } ,
 
 {
-            "id": "773",
+            "id": 773,
             "name": "Silvally"
             } ,
 
 {
-            "id": "785",
+            "id": 785,
             "name": "Tapu Koko"
             } ,
 
 {
-            "id": "786",
+            "id": 786,
             "name": "Tapu Lele"
             } ,
 
 {
-            "id": "787",
+            "id": 787,
             "name": "Tapu Bulu"
             } ,
 
 {
-            "id": "788",
+            "id": 788,
             "name": "Tapu Fini"
             } ,
 
 {
-            "id": "789",
+            "id": 789,
             "name": "Cosmog"
             } ,
 
 {
-            "id": "790",
+            "id": 790,
             "name": "Cosmoem"
             } ,
 
 {
-            "id": "791",
+            "id": 791,
             "name": "Solgaleo"
             } ,
 
 {
-            "id": "792",
+            "id": 792,
             "name": "Lunala"
             } ,
 
 {
-            "id": "808",
+            "id": 808,
             "name": "Meltan"
             } ,
 
 {
-            "id": "809",
+            "id": 809,
             "name": "Melmetal"
             } ,
 
 {
-            "id": "888",
+            "id": 888,
             "name": "Zacian"
             } ,
 
 {
-            "id": "889",
+            "id": 889,
             "name": "Zamazenta"
             } ,
 
 {
-            "id": "890",
+            "id": 890,
             "name": "Eternatus"
             } ,
 
 {
-            "id": "891",
+            "id": 891,
             "name": "Kubfu"
             } ,
 
 {
-            "id": "892",
+            "id": 892,
             "name": "Urshifu"
             } ,
 
 {
-            "id": "894",
+            "id": 894,
             "name": "Regieleki"
             } ,
 
 {
-            "id": "895",
+            "id": 895,
             "name": "Regidrago"
             } ,
 
 {
-            "id": "896",
+            "id": 896,
             "name": "Glastrier"
             } ,
 
 {
-            "id": "897",
+            "id": 897,
             "name": "Spectrier"
             } ,
 
 {
-            "id": "898",
+            "id": 898,
             "name": "Calyrex"
             }
 ]
